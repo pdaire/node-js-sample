@@ -8,6 +8,10 @@ app.get('/', function(request, response) {
   response.send('¡Hooola node!')
 })
 
+app.post('/', function(request, response) {
+  response.status(200).send()
+})
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
