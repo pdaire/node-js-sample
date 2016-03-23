@@ -5,11 +5,13 @@ app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
-  response.send('¡Hooola node!')
+  console.log(request);
+  response.send('¡Hooola node!');
 })
 
 app.post('/', function(request, response) {
-  response.status(200).send()
+  console.log(request);
+  response.status(200).send();
 })
 
 app.listen(app.get('port'), function() {
