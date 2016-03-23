@@ -10,23 +10,23 @@ app.get('/', function(req, res) {
 })
 
 app.post('/', function(req, res) {
-  console.log('cookies: 'req.cookies);
-  console.log('fresh: 'req.fresh);
-  console.log('hostname: 'req.hostname);
-  console.log('ip: 'req.ip);
-  console.log('ips: 'req.ips);
-  console.log('method: 'req.method);
-  console.log('originalUrl: 'req.originalUrl);
-  console.log('params: 'req.params);
-  console.log('path: 'req.path);
-  console.log('protocol: 'req.protocol);
-  console.log('query: 'req.query);
-  console.log('route: 'req.route);
-  console.log('secure: 'req.secure);
-  console.log('signedCookies: 'req.signedCookies);
-  console.log('stale: 'req.stale);
-  console.log('subdomains: 'req.subdomains);
-  console.log('xhr: 'req.xhr);
+  console.log(req.cookies);
+  console.log(req.fresh);
+  console.log(req.hostname);
+  console.log(req.ip);
+  console.log(req.ips);
+  console.log(req.method);
+  console.log(req.originalUrl);
+  console.log(req.params);
+  console.log(req.path);
+  console.log(req.protocol);
+  console.log(req.query);
+  console.log(req.route);
+  console.log(req.secure);
+  console.log(req.signedCookies);
+  console.log(req.stale);
+  console.log(req.subdomains);
+  console.log(req.xhr);
   res.status(200).send();
 })
 
