@@ -10,7 +10,10 @@ app.get('/', function(request, response) {
 })
 
 app.post('/', function(request, response) {
-  console.log(request);
+  console.log(request.headers);
+  console.log(request.params);
+  console.log(request.path);
+  console.log(request.body);
   response.status(200).send();
 })
 
