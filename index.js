@@ -1,20 +1,19 @@
 var express = require('express')
+var bodyParser = require('body-parser')
 var app = express()
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
+app.use(bodyParser.json()) // for parsing application/json
 
 app.get('/', function(request, response) {
-  console.log(request);
   response.send('¡Hooola node!');
 })
 
 app.post('/', function(request, response) {
-  console.log(request.headers);
-  console.log(request.params);
-  console.log(request.path);
-  console.log(request.body);
-  response.status(200).send();
+  console.log('headers: ', request.headers)
+  console.log('body: ', request.body)
+  response.status(200).json(request.body).send()
 })
 
 app.listen(app.get('port'), function() {
